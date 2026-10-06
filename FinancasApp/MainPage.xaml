@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinancasApp.MainPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Grid ColumnDefinitions="*,Auto">
+                <VerticalStackLayout Spacing="2">
+                    <Label Text="Olá, usuário 👋" FontSize="16" TextColor="#6B7280" />
+                    <Label Text="Resumo financeiro" FontSize="26" FontAttributes="Bold" TextColor="#111827" />
+                </VerticalStackLayout>
+                <Border Grid.Column="1" WidthRequest="46" HeightRequest="46" StrokeThickness="0" BackgroundColor="White" StrokeShape="RoundRectangle 23">
+                    <Label Text="🔔" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+                </Border>
+            </Grid>
+            <Border Padding="20" StrokeThickness="0" BackgroundColor="#111827" StrokeShape="RoundRectangle 20">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Saldo total" FontSize="14" TextColor="#D1D5DB" />
+                    <Label Text="R$ 8.450,75" FontSize="32" FontAttributes="Bold" TextColor="White" />
+                    <Grid Margin="0,10,0,0" ColumnDefinitions="*,*">
+                        <VerticalStackLayout>
+                            <Label Text="Receitas" FontSize="12" TextColor="#9CA3AF" />
+                            <Label Text="R$ 12.500,00" FontSize="15" FontAttributes="Bold" TextColor="White" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="1">
+                            <Label Text="Despesas" FontSize="12" TextColor="#9CA3AF" />
+                            <Label Text="R$ 4.049,25" FontSize="15" FontAttributes="Bold" TextColor="White" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                <Border Padding="16" BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 16">
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="↑ Receitas" FontSize="14" TextColor="#16A34A" />
+                        <Label Text="R$ 12.500,00" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
+                        <Label Text="Este mês" FontSize="12" TextColor="#9CA3AF" />
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Column="1" Padding="16" BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 16">
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="↓ Despesas" FontSize="14" TextColor="#DC2626" />
+                        <Label Text="R$ 4.049,25" FontSize="20" FontAttributes="Bold" TextColor="#111827" />
+                        <Label Text="Este mês" FontSize="12" TextColor="#9CA3AF" />
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="Orçamento do mês" FontSize="19" FontAttributes="Bold" TextColor="#111827" />
+                <Label Grid.Column="1" Text="67%" FontSize="16" FontAttributes="Bold" TextColor="#111827" />
+            </Grid>
+            <Border Padding="16" BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 16">
+                <VerticalStackLayout Spacing="12">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="R$ 4.049,25 gastos" FontSize="14" TextColor="#4B5563" />
+                        <Label Grid.Column="1" Text="de R$ 6.000,00" FontSize="14" TextColor="#9CA3AF" />
+                    </Grid>
+                    <ProgressBar Progress="0.67" HeightRequest="8" />
+                    <Label Text="Você ainda pode gastar R$ 1.950,75 este mês." FontSize="13" TextColor="#6B7280" />
+                </VerticalStackLayout>
+            </Border>
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="Últimas movimentações" FontSize="19" FontAttributes="Bold" TextColor="#111827" />
+                <Label Grid.Column="1" Text="Ver todas" FontSize="14" TextColor="#2563EB" VerticalOptions="Center" />
+            </Grid>
+            <VerticalStackLayout Spacing="10">
+                <Border Padding="14" BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 16">
+                    <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12">
+                        <Border WidthRequest="44" HeightRequest="44" BackgroundColor="#FEF3C7" StrokeThickness="0" StrokeShape="RoundRectangle 12">
+                            <Label Text="🛒" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                            <Label Text="Supermercado" FontSize="15" FontAttributes="Bold" TextColor="#111827" />
+                            <Label Text="Alimentação • Hoje" FontSize="12" TextColor="#9CA3AF" />
+                        </VerticalStackLayout>
+                        <Label Grid.Column="2" Text="- R$ 185,40" FontSize="14" FontAttributes="Bold" TextColor="#DC2626" VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+                <Border Padding="14" BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 16">
+                    <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12">
+                        <Border WidthRequest="44" HeightRequest="44" BackgroundColor="#DCFCE7" StrokeThickness="0" StrokeShape="RoundRectangle 12">
+                            <Label Text="💰" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                            <Label Text="Salário" FontSize="15" FontAttributes="Bold" TextColor="#111827" />
+                            <Label Text="Salário • 05/10/2026" FontSize="12" TextColor="#9CA3AF" />
+                        </VerticalStackLayout>
+                        <Label Grid.Column="2" Text="+ R$ 8.500,00" FontSize="14" FontAttributes="Bold" TextColor="#16A34A" VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+                <Border Padding="14" BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 16">
+                    <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12">
+                        <Border WidthRequest="44" HeightRequest="44" BackgroundColor="#E0E7FF" StrokeThickness="0" StrokeShape="RoundRectangle 12">
+                            <Label Text="🚗" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                            <Label Text="Uber" FontSize="15" FontAttributes="Bold" TextColor="#111827" />
+                            <Label Text="Transporte • 04/10/2026" FontSize="12" TextColor="#9CA3AF" />
+                        </VerticalStackLayout>
+                        <Label Grid.Column="2" Text="- R$ 32,80" FontSize="14" FontAttributes="Bold" TextColor="#DC2626" VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+            </VerticalStackLayout>
+            <Label Text="Próximas contas" FontSize="19" FontAttributes="Bold" TextColor="#111827" Margin="0,5,0,0" />
+            <Border Padding="16" BackgroundColor="White" StrokeThickness="0" StrokeShape="RoundRectangle 16">
+                <VerticalStackLayout Spacing="14">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <VerticalStackLayout Spacing="2">
+                            <Label Text="Internet" FontAttributes="Bold" TextColor="#111827" />
+                            <Label Text="Vence em 3 dias" FontSize="12" TextColor="#9CA3AF" />
+                        </VerticalStackLayout>
+                        <Label Grid.Column="1" Text="R$ 119,90" FontAttributes="Bold" TextColor="#DC2626" />
+                    </Grid>
+                    <BoxView HeightRequest="1" Color="#F3F4F6" />
+                    <Grid ColumnDefinitions="*,Auto">
+                        <VerticalStackLayout Spacing="2">
+                            <Label Text="Aluguel" FontAttributes="Bold" TextColor="#111827" />
+                            <Label Text="Vence em 5 dias" FontSize="12" TextColor="#9CA3AF" />
+                        </VerticalStackLayout>
+                        <Label Grid.Column="1" Text="R$ 1.800,00" FontAttributes="Bold" TextColor="#DC2626" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
